@@ -10,10 +10,7 @@ def riskVersion = properties.getProperty('FINBOX_RM_VERSION')
 def riskArtifact = properties.getProperty('FINBOX_RM_ARTIFACT')
 
 repositories {
-    maven {
-            url 'https://maven.google.com'
-    }
-    maven {
+        maven {
         url "s3://risk-manager-android-sdk/artifacts"
         credentials(AwsCredentials) {
             accessKey = awsKey 
